@@ -17,12 +17,12 @@ inputs:
   name:
     string:
       constraints: { minLength: 1 }
-      description: name of provisioned server
-  location:
+      description: name of provisioned db
+  locations:
     string:
       constraints: { minLength: 1 }
-      description: location of provisioned server
-      default: westus
+      description: space separated locations of provisioned db in 'regionName=failoverPriority' format
+      default: West US=0
   resourceGroup:
     string:
       constraints: { minLength: 1 }
@@ -37,6 +37,21 @@ inputs:
       constraints: { enum: [GlobalDocumentDB, MongoDB, Parse] }
       description: type of the provisioned db
       default: GlobalDocumentDB
+  maxInterval:
+    number:
+      constraints: { format: integer, minimum: 1, maximum: 100 }
+      description: tolerated record staleness (in seconds) for provisioned db
+      default: 5
+  maxStalenessPrefix:
+    number:
+      constraints: { format: integer, minimum: 1, maximum: 2147483647 }
+      description: tolerated number of stale requests for provisioned db
+      default: 100
+  ipRangeFilter:
+    string:
+      constraints: { minLength: 1 }
+      description: comma separated list of IPs in CIDR format to allow through firewall of provisioned db
+      default: 0.0.0.0/0
 run:
   container:
     image: { ref: 'azuresdk/azure-cli-python:0.2.10' }
@@ -47,7 +62,10 @@ run:
       azureUsername:
       azurePassword:
       name:
-      location:
+      locations:
       resourceGroup:
       defaultConsistencyLevel:
       kind:
+      maxInterval:
+      maxStalenessPrefix:
+      ipRangeFilter:

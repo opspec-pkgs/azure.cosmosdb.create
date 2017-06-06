@@ -28,9 +28,14 @@ run:
       azureUsername: 
       azurePassword: 
       name:
-      location:
+      # begin optional args
+      locations:
       resourceGroup: 
       defaultConsistencyLevel: 
-      kind: 
+      kind:
+      maxStaleness:
+      maxStalenessPrefix:
+      ipRangeFilter:
+      # end optional args
 ```
 

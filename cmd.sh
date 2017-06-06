@@ -15,7 +15,10 @@ else
   az cosmosdb create \
     --default-consistency-level "$defaultConsistencyLevel" \
     --kind "$kind" \
-    --location "$location" \
+    --max-interval "$maxInterval" \
+    --max-staleness-prefix "$maxStalenessPrefix" \
+    --ip-range-filter "$ipRangeFilter" \
+    --locations "$locations" \
     --name "$name" \
     --resource-group "$resourceGroup"
 fi
