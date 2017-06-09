@@ -33,7 +33,7 @@ run:
       resourceGroup: 
       defaultConsistencyLevel: 
       kind:
-      maxStaleness:
+      maxInterval:
       maxStalenessPrefix:
       ipRangeFilter:
       # end optional args
