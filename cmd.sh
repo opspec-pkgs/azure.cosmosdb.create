@@ -26,7 +26,7 @@ az account set --subscription "$subscriptionId"
 echo "setting default subscription"
 az account set --subscription "$subscriptionId"
 
-echo "checking for exiting sql server"
+echo "checking for exiting cosmos db"
 if [ "$(az cosmosdb show --name "$name" --resource-group "$resourceGroup")" != "" ]
 then
   echo "found exiting cosmos db"
