@@ -24,15 +24,17 @@ run:
   op:
     pkg: { ref: github.com/opspec-pkgs/azure.cosmosdb.create#VERSION }
     inputs: 
-      subscriptionId: 
-      azureUsername: 
-      azurePassword: 
+      subscriptionId:
+      loginId:
+      loginSecret:
       name:
+      resourceGroup: 
       # begin optional args
       locations:
-      resourceGroup: 
       defaultConsistencyLevel: 
       kind:
+      loginTenantId:
+      loginType:
       maxInterval:
       maxStalenessPrefix:
       ipRangeFilter:
