@@ -23,9 +23,6 @@ echo "setting default subscription"
 az account set --subscription "$subscriptionId"
 ### end login
 
-echo "setting default subscription"
-az account set --subscription "$subscriptionId"
-
 echo "checking for exiting cosmos db"
 if [ "$(az cosmosdb show --name "$name" --resource-group "$resourceGroup")" != "" ]
 then
