@@ -20,25 +20,24 @@ opctl run github.com/opspec-pkgs/azure.cosmosdb.create#VERSION
 ## compose
 
 ```yaml
-run:
-  op:
-    pkg: { ref: github.com/opspec-pkgs/azure.cosmosdb.create#VERSION }
-    inputs: 
-      subscriptionId:
-      loginId:
-      loginSecret:
-      name:
-      resourceGroup: 
-      # begin optional args
-      locations:
-      defaultConsistencyLevel: 
-      kind:
-      loginTenantId:
-      loginType:
-      maxInterval:
-      maxStalenessPrefix:
-      ipRangeFilter:
-      # end optional args
+op:
+  pkg: { ref: github.com/opspec-pkgs/azure.cosmosdb.create#VERSION }
+  inputs: 
+    subscriptionId:
+    loginId:
+    loginSecret:
+    name:
+    resourceGroup: 
+    # begin optional args
+    locations:
+    defaultConsistencyLevel: 
+    kind:
+    loginTenantId:
+    loginType:
+    maxInterval:
+    maxStalenessPrefix:
+    ipRangeFilter:
+    # end optional args
 ```
 
 # Support
