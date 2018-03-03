@@ -1,47 +1,49 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/azure.cosmosdb.create.svg?branch=master)](https://travis-ci.org/opspec-pkgs/azure.cosmosdb.create)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 creates an azure cosmos db (if doesn't already exist)
 
+# Format
+
+this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
+
 # Example usage
 
-> note: in examples, VERSION represents a version of the
-> azure.cosmosdb.create pkg
-
-## install
+## Install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/azure.cosmosdb.create#VERSION
+opctl pkg install github.com/opspec-pkgs/azure.cosmosdb.create#
 ```
 
-## run
+## Run
 
 ```
-opctl run github.com/opspec-pkgs/azure.cosmosdb.create#VERSION
+opctl run github.com/opspec-pkgs/azure.cosmosdb.create#
 ```
 
-## compose
+## Compose
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/azure.cosmosdb.create#VERSION }
-  inputs: 
+  pkg: { ref: github.com/opspec-pkgs/azure.cosmosdb.create# }
+  inputs:
     subscriptionId:
     loginId:
     loginSecret:
     name:
-    resourceGroup: 
-    # begin optional args
+    resourceGroup:
+    # params w/ default
     locations:
-    defaultConsistencyLevel: 
+    defaultConsistencyLevel:
     kind:
     loginTenantId:
     loginType:
     maxInterval:
     maxStalenessPrefix:
     ipRangeFilter:
-    # end optional args
 ```
 
 # Support
